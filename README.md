@@ -4,18 +4,12 @@
 
 ### AI-Assisted Structure-Based Drug Discovery of SARS-CoV-2 Main Protease (7SFB)
 
-<img src="figures/hero-banner.png" width="100%">
-
-<br>
-
 ![Python](https://img.shields.io/badge/Python-Bioinformatics-blue?style=for-the-badge&logo=python)
 ![CADD](https://img.shields.io/badge/CADD-Drug_Discovery-success?style=for-the-badge)
 ![AlphaFold3](https://img.shields.io/badge/AlphaFold3-AI_Structure_Prediction-purple?style=for-the-badge)
 ![SwissADME](https://img.shields.io/badge/SwissADME-Drug_Likeness-orange?style=for-the-badge)
 ![ADMETlab](https://img.shields.io/badge/ADMETlab-3.0-red?style=for-the-badge)
 ![PyMOL](https://img.shields.io/badge/PyMOL-Molecular_Visualization-cyan?style=for-the-badge)
-
-<br>
 
 ### Computational Biology × Structural Bioinformatics × AI
 
@@ -25,41 +19,18 @@
 
 ## 🌍 Overview
 
-This repository presents a complete **Computer-Aided Drug Design (CADD)** workflow targeting the **SARS-CoV-2 Main Protease (Mpro)** using the experimentally resolved protein structure **7SFB**.
+This repository presents a complete Computer-Aided Drug Design (CADD) workflow targeting the SARS-CoV-2 Main Protease (Mpro) using the experimentally resolved protein structure **7SFB**.
 
-The project integrates:
+The workflow integrates:
 
-- 🧪 Drug-Likeness Screening
-- 🧬 Protein Preparation
-- 🎯 Binding Site Prediction
-- 📊 ADMET Profiling
-- 🤖 AI-Based Structure Validation
-- 🔬 Structural Bioinformatics
+- Drug-Likeness Screening
+- Protein Preparation
+- Binding Site Prediction
+- ADMET Profiling
+- AI-Based Structure Validation
+- Structural Bioinformatics Analysis
 
 to evaluate ligand suitability, protein druggability, pharmacokinetic properties, and AI-predicted structural reliability.
-
----
-
-# 🦠 Target Protein
-
-<div align="center">
-
-<img src="figures/raw-7sfb.png" width="800">
-
-<br>
-
-*Experimental crystal structure of SARS-CoV-2 Main Protease (7SFB)*
-
-</div>
-
-| Parameter | Value |
-|------------|------------|
-| Protein | SARS-CoV-2 Main Protease (Mpro / 3CLpro) |
-| PDB ID | 7SFB |
-| Resolution | 1.90 Å |
-| Method | X-Ray Diffraction |
-| Function | Viral Replication Enzyme |
-| Target Class | Antiviral Drug Target |
 
 ---
 
@@ -76,6 +47,19 @@ To computationally evaluate selected ligands against SARS-CoV-2 Main Protease th
 ✅ ADMET profiling
 
 ✅ AI-assisted structure validation
+
+---
+
+# 🦠 Target Protein
+
+| Parameter | Value |
+|------------|------------|
+| Protein | SARS-CoV-2 Main Protease (Mpro / 3CLpro) |
+| PDB ID | 7SFB |
+| Experimental Method | X-Ray Diffraction |
+| Resolution | 1.90 Å |
+| Function | Viral Replication Enzyme |
+| Drug Target Class | Antiviral Target |
 
 ---
 
@@ -96,7 +80,7 @@ E --> F[Protein Preparation]
 
 F --> G[DoGSiteScorer]
 
-G --> H[Binding Pocket Prediction]
+G --> H[Binding Site Prediction]
 
 C --> I[ADMETlab 3.0]
 
@@ -125,148 +109,57 @@ L --> M[Structural Validation]
 
 # 🧪 Drug-Likeness Screening
 
-All compounds were evaluated using **SwissADME** and **Lipinski's Rule of Five**.
-
----
-
-## Molecular Structures
-
-<table>
-<tr>
-
-<td align="center">
-
-<b>Aspirin</b>
-
-<br>
-
-<img src="figures/aspirin.png" width="220">
-
-</td>
-
-<td align="center">
-
-<b>Ibuprofen</b>
-
-<br>
-
-<img src="figures/ibuprofen.png" width="220">
-
-</td>
-
-</tr>
-
-<tr>
-
-<td align="center">
-
-<b>Acetaminophen</b>
-
-<br>
-
-<img src="figures/acetaminophen.png" width="220">
-
-</td>
-
-<td align="center">
-
-<b>Naproxen</b>
-
-<br>
-
-<img src="figures/naproxen.png" width="220">
-
-</td>
-
-</tr>
-
-</table>
+All compounds were evaluated using SwissADME and Lipinski's Rule of Five.
 
 <div align="center">
 
-<b>Diclofenac</b>
-
-<br><br>
-
-<img src="figures/diclofenac.png" width="220">
+<img src="./figures/lipinski_analysis.png" width="900">
 
 </div>
 
----
+### Key Finding
 
-## Lipinski Rule of Five Results
-
-| Compound | MW | HBD | HBA | LogP | Status |
-|-----------|-----------|-----------|-----------|-----------|-----------|
-| Aspirin | 180.16 | 1 | 4 | 1.28 | ✅ Pass |
-| Ibuprofen | 206.28 | 1 | 2 | 3.21 | ✅ Pass |
-| Acetaminophen | 151.16 | 2 | 2 | 0.86 | ✅ Pass |
-| Naproxen | 230.26 | 1 | 3 | 2.96 | ✅ Pass |
-| Diclofenac | 296.15 | 2 | 2 | 4.09 | ✅ Pass |
-
-> **All five compounds satisfied Lipinski's Rule of Five, indicating favorable physicochemical properties and potential oral bioavailability.**
+All five ligands satisfied Lipinski's Rule of Five, indicating favorable physicochemical properties and potential oral bioavailability.
 
 ---
 
 # 🧬 Protein Preparation
 
-Protein preparation was performed using **UCSF Chimera** to generate a docking-ready structure.
-
----
-
-## Before Preparation
+Protein preparation was performed using UCSF Chimera to generate a docking-ready structure.
 
 <div align="center">
 
-<img src="figures/raw-7sfb.png" width="800">
+<img src="./figures/protein_preparation.png" width="900">
 
 </div>
 
-### Raw Experimental Structure
-
-Contains:
-
-- Water molecules
-- Heteroatoms
-- Crystallographic artifacts
-
----
-
-## After Preparation
-
-<div align="center">
-
-<img src="figures/prepared-7sfb.png" width="800">
-
-</div>
-
-### Docking-Ready Structure
-
-Performed:
+### Preparation Steps
 
 - Chain A selection
-- Water removal
+- Water molecule removal
 - Heteroatom removal
 - Hydrogen addition
 - Gasteiger charge assignment
+
+Output:
+
+```text
+7SFB_prepared.pdb
+```
 
 ---
 
 # 🎯 Binding Site Prediction
 
-Binding pocket analysis was performed using **DoGSiteScorer**.
-
----
+Binding pocket analysis was performed using DoGSiteScorer.
 
 <div align="center">
 
-<img src="figures/binding-pocket.png" width="850">
+<img src="./figures/binding_site.png" width="900">
 
 </div>
 
----
-
-## Primary Binding Pocket
+### Primary Binding Pocket
 
 | Parameter | Value |
 |------------|------------|
@@ -275,9 +168,7 @@ Binding pocket analysis was performed using **DoGSiteScorer**.
 | Surface Area | 776.96 Å² |
 | Druggability Score | 0.75 |
 
----
-
-## Key Binding Residues
+### Key Residues
 
 ```text
 THR25
@@ -289,91 +180,39 @@ VAL42
 
 ---
 
-## DoGSiteScorer Results
-
-<div align="center">
-
-<img src="figures/dogsite-results.png" width="900">
-
-</div>
-
----
-
-### Interpretation
-
-The identified binding cavity demonstrated:
-
-- High druggability
-- Large accessible volume
-- Favorable surface area
-- Catalytically relevant residues
-
-These characteristics make the pocket suitable for ligand accommodation and molecular docking studies.
-
----
-
 # 📊 ADMET Profiling
 
-ADMET properties were predicted using **ADMETlab 3.0**.
-
----
+ADMET properties were predicted using ADMETlab 3.0.
 
 <div align="center">
 
-<img src="figures/admet-results.png" width="950">
+<img src="./figures/admet_results.png" width="900">
 
 </div>
 
----
-
-## Comparative Analysis
+### Comparative Findings
 
 | Compound | Assessment |
 |-----------|-----------|
 | Aspirin | ⭐ Balanced Profile |
 | Ibuprofen | ⭐ Balanced Profile |
-| Acetaminophen | ⚠ Hepatotoxicity Considerations |
+| Acetaminophen | ⚠ Hepatotoxicity Concern |
 | Naproxen | ⚠ Longer Half-Life |
 | Diclofenac | ⚠ Elevated Toxicity Risk |
 
 ---
 
-### Key Observations
-
-- Aspirin and Ibuprofen demonstrated favorable ADMET profiles.
-- Acetaminophen exhibited efficient clearance but hepatotoxicity concerns.
-- Naproxen displayed prolonged biological persistence.
-- Diclofenac showed strong plasma protein binding with elevated toxicity indicators.
-
----
-
 # 🤖 AlphaFold3 Structure Validation
 
-To evaluate AI-based structure prediction reliability, the sequence of 7SFB Chain A was submitted to AlphaFold3.
-
----
-
-## AlphaFold3 Predicted Structure
+The sequence of 7SFB Chain A was submitted to AlphaFold3 for AI-based protein structure prediction.
 
 <div align="center">
 
-<img src="figures/alphafold3-model.png" width="850">
+<img src="./figures/alphafold_alignment.png" width="900">
 
 </div>
 
----
-
-## Experimental vs Predicted Overlay
-
-<div align="center">
-
-<img src="figures/structure-overlay.png" width="900">
-
-</div>
-
----
-
-## Structural Comparison
+### Structural Comparison
 
 | Metric | Result |
 |-----------|-----------|
@@ -382,21 +221,9 @@ To evaluate AI-based structure prediction reliability, the sequence of 7SFB Chai
 | Structural Agreement | Excellent |
 | Confidence | High |
 
----
+### Interpretation
 
-### Structural Interpretation
-
-The AlphaFold3-predicted model demonstrated excellent agreement with the experimentally resolved crystal structure.
-
-#### Highlights
-
-✅ RMSD below 1 Å
-
-✅ Strong structural overlap
-
-✅ High-confidence pLDDT regions
-
-✅ Minor deviations restricted to flexible loops
+The AlphaFold3-predicted model demonstrated excellent agreement with the experimentally resolved crystal structure, validating the reliability of AI-assisted protein structure prediction.
 
 ---
 
@@ -404,11 +231,11 @@ The AlphaFold3-predicted model demonstrated excellent agreement with the experim
 
 ```diff
 + All ligands passed Lipinski screening
-+ Binding pocket exhibited strong druggability
-+ ADMET profiling identified candidate-specific trade-offs
++ High-druggability binding pocket identified
++ ADMET profiling highlighted candidate-specific trade-offs
 + AlphaFold3 achieved excellent structural agreement
 + RMSD = 0.616 Å
-+ AI-based structure prediction successfully reproduced experimental architecture
++ Strong support for AI-assisted structural biology workflows
 ```
 
 ---
@@ -432,19 +259,11 @@ The AlphaFold3-predicted model demonstrated excellent agreement with the experim
 │   └── aligned/
 │
 ├── figures/
-│   ├── hero-banner.png
-│   ├── aspirin.png
-│   ├── ibuprofen.png
-│   ├── acetaminophen.png
-│   ├── naproxen.png
-│   ├── diclofenac.png
-│   ├── raw-7sfb.png
-│   ├── prepared-7sfb.png
-│   ├── binding-pocket.png
-│   ├── dogsite-results.png
-│   ├── admet-results.png
-│   ├── alphafold3-model.png
-│   └── structure-overlay.png
+│   ├── lipinski_analysis.png
+│   ├── protein_preparation.png
+│   ├── binding_site.png
+│   ├── admet_results.png
+│   └── alphafold_alignment.png
 │
 ├── results/
 └── docs/
@@ -456,27 +275,20 @@ The AlphaFold3-predicted model demonstrated excellent agreement with the experim
 
 | Category | Tool |
 |-----------|-----------|
-| Protein Visualization | PyMOL |
-| Protein Preparation | UCSF Chimera |
 | Drug-Likeness Screening | SwissADME |
+| Protein Preparation | UCSF Chimera |
 | Binding Site Prediction | DoGSiteScorer |
 | ADMET Prediction | ADMETlab 3.0 |
+| Protein Visualization | PyMOL |
 | AI Structure Prediction | AlphaFold3 |
 
 ---
 
-# 🌟 Scientific Significance
+# 🌟 Scientific Relevance
 
-The SARS-CoV-2 Main Protease remains one of the most important antiviral drug targets due to its essential role in viral replication.
+The SARS-CoV-2 Main Protease remains one of the most extensively studied antiviral drug targets due to its essential role in viral replication.
 
-This project demonstrates the integration of:
-
-- Computational Biology
-- Structural Bioinformatics
-- Drug Discovery Informatics
-- Artificial Intelligence
-
-within a unified early-stage drug discovery workflow.
+This repository demonstrates the integration of Computational Biology, Structural Bioinformatics, Drug Discovery Informatics, and Artificial Intelligence within a unified early-stage drug discovery workflow.
 
 ---
 
@@ -484,9 +296,9 @@ within a unified early-stage drug discovery workflow.
 
 ## Ayushi
 
-**Final Year B.Sc. Chemistry**
+Final Year B.Sc. Chemistry
 
-Computational Biology • Bioinformatics • Structural Bioinformatics • CADD
+Computational Biology • Bioinformatics • CADD
 
 ### Research Interests
 
@@ -494,7 +306,7 @@ Computational Biology • Bioinformatics • Structural Bioinformatics • CADD
 
 💊 Drug Discovery
 
-🤖 AI in Life Sciences
+🤖 Artificial Intelligence in Life Sciences
 
 🔬 Structural Bioinformatics
 
@@ -502,7 +314,7 @@ Computational Biology • Bioinformatics • Structural Bioinformatics • CADD
 
 <div align="center">
 
-### ⭐ Star this repository if you found it useful
+### ⭐ Star this repository if you found it useful.
 
 ### Computational Biology × Structural Bioinformatics × AI
 
